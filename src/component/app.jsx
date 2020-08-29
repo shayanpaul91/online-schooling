@@ -8,6 +8,8 @@ import {
 import Dashboard from './dashboard';
 import EducationService from './educational-service';
 import HealthSerice from './health-service';
+import SubjecList from './subject-list';
+import ViewFiles from './view-files';
 
 export default class App extends React.Component {
     render() {
@@ -19,6 +21,8 @@ export default class App extends React.Component {
                         <Route path='/' exact component={Dashboard}></Route>
                         <Route path='/education-service' exact component={EducationService}></Route>
                         <Route path='/health-service' exact component={HealthSerice}></Route>
+                        <Route path='/subject-list/:class/:type' exact component={SubjecList}></Route>
+                        <Route path='/view-files/:id' exact component={ViewFiles}></Route>
                     </Switch>
                 </Router>
                 <Footer />

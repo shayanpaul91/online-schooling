@@ -1,0 +1,40 @@
+[
+    {
+        "class": "Class 1",
+    
+        "subject" : [
+            {
+                "id": "001",
+                "type": "english" ,
+                "subjectName": "English",
+                "description" : "something related to subject"
+                    
+            },
+            { 
+                "id": "002",
+                "type": "assamese",
+                "subjectName": "Hindi",
+
+                "description" : "something related to subject"
+            },
+            {
+                "id": "003",
+                "type": "assamese",
+                "subjectName": "Bengali"            ,
+                "description" : "something related to subject"
+            },
+            {
+                "id": "004",
+                "type": "assamese",
+                "subjectName": "Assamese"            ,
+                "description" : "something related to subject"
+            },
+            {
+                "id": "005",
+                "type": "assamese",
+                "subjectName": "Gonit"            ,
+                "description" : "something related to subject"
+            }
+        ]
+    }
+]

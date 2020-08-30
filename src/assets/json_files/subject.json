@@ -36,5 +36,23 @@
                 "description" : "something related to subject"
             }
         ]
+    }, {
+        "class":"1st Year",
+        "subject":[
+            {
+                "id": "006",
+                "type": " Hs - English" ,
+                "subjectName": "English",
+                "description" : "something related to subject"
+                    
+            },
+            {
+                "id": "007",
+                "type": "english" ,
+                "subjectName": "Maths",
+                "description" : "something related to subject"
+                    
+            }
+        ]
     }
 ]

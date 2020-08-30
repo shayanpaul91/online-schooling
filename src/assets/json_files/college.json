@@ -1,0 +1,36 @@
+[
+    {
+        "class" : "1st Year",
+        "institution": [{
+            "name": "institution1"
+        }, {
+            "name" :"institution2"
+        }, {
+            "name" :"institution3"
+        }],
+        "teacher": [{
+            "name": "teacher1"
+        }, {
+            "name" :"teacher2"
+        }, {
+            "name" :"teacher3"
+        }]
+    },
+    {
+        "class" : "2nd Year",
+        "institution": [{
+            "name": "institution1"
+        }, {
+            "name" :"institution2"
+        }, {
+            "name" :"institution3"
+        }],
+        "teacher": [{
+            "name": "teacher1"
+        }, {
+            "name" :"teacher2"
+        }, {
+            "name" :"teacher3"
+        }]
+    }
+]

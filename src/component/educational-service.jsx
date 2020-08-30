@@ -1,10 +1,13 @@
 import React from 'react';
 import { Redirect } from "react-router-dom";
-const data = require('./../assets/json_files/school.json');
+let data = require('./../assets/json_files/school.json');
 export default class EducationService extends React.Component {
-    state = { selected: false, type: '', classId: '' };
+    state = { selected: false, type: '', classId: '', isHs: false };
     render() {
+        let data = [];
         let isSelected = this.state.selected;
+        data = (isSelected && this.state.isHs) ? require('./../assets/json_files/college.json'):
+        require('./../assets/json_files/school.json');
         if (this.state.classId) {
             return <Redirect to={`/subject-list/${this.state.classId}/ ${this.state.type}`} />
         }
@@ -18,18 +21,20 @@ export default class EducationService extends React.Component {
                     <div className="ui three column grid">
                         <div className="column">
                             <div className="ui raised segment">
-                                <span style = {{cursor: 'pointer'}} className="ui red ribbon label" onClick={this.route = () => {
+                                <span style={{ cursor: 'pointer' }} className="ui red ribbon label" onClick={this.route = () => {
                                     this.setState({
                                         selected: true,
-                                        type: 'SEBA - English'
+                                        type: 'SEBA - English',
+                                        isHs: false
                                     });
                                 }}>English</span>
                                 <span>SEBA</span>
                                 <p></p>
-                                <span style = {{cursor: 'pointer'}} className="ui teal right ribbon label" onClick={this.route = () => {
+                                <span style={{ cursor: 'pointer' }} className="ui teal right ribbon label" onClick={this.route = () => {
                                     this.setState({
                                         selected: true,
-                                        type: 'SEBA - Assamese'
+                                        type: 'SEBA - Assamese',
+                                        isHs: false
                                     });
                                 }}>Assamese</span>
                                 <p></p>
@@ -40,26 +45,35 @@ export default class EducationService extends React.Component {
                                 <a className="ui red ribbon label" onClick={this.route = () => {
                                     this.setState({
                                         selected: true,
-                                        type: 'CBSE - English'
+                                        type: 'CBSE - English',
+                                        isHs: false
                                     });
-                                }}>English</a>
+                                }}>View Class</a>
                                 <span>CBSE</span>
                                 <p></p>
-                                <a className="ui teal right ribbon label" onClick={this.route = () => {
-                                    this.setState({
-                                        selected: true,
-                                        type: 'SEBA - Assamese'
-                                    });
-                                }}>Assamese</a>
+
                                 <p></p>
                             </div>
                         </div>
                         <div className="column">
                             <div className="ui raised segment">
-                                <a className="ui red ribbon label">English</a>
+                                <a className="ui red ribbon label"  onClick={this.route = () => {
+                                    this.setState({
+                                        selected: true,
+                                        type: 'HS - English',
+                                        isHs: true
+                                    });
+                                }}>English</a>
                                 <span>HS</span>
                                 <p></p>
-                                <a className="ui teal right ribbon label">Assamese</a>
+                                <a className="ui teal right ribbon label"
+                                 onClick={this.route = () => {
+                                    this.setState({
+                                        selected: true,
+                                        type: 'HS - Assamese',
+                                        isHs: true
+                                    });
+                                }}>Assamese</a>
                                 <p></p>
                             </div>
                         </div>
